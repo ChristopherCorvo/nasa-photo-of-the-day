@@ -5,14 +5,11 @@ const DateInputForm = props => {
 
     
 return(
-    <input type="date" id="start" 
-    name="trip-start"
-       value="2018-07-22"
-       min="1998-01-01" max="2020-10-01">
-    </input>
-
+    <form onSubmit={console.log("Form has been submitted")}>
+        <input type="date" id="datePicker" name="date" min="1998-01-01"></input>
+    </form>
     )
 
 }
 
-export default DateInputForm
+export default DateInputForm;
