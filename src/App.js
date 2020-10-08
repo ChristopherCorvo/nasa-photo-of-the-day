@@ -17,7 +17,7 @@ function App() {
   const [imageExplanation, setImageExplanation] = useState('')
   
   useEffect(() => {
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2020-09-29`)
+    axios.get(``) //https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=
       .then(res =>{
         
         // add data to state
@@ -36,8 +36,8 @@ function App() {
     <div className="App">
       
       <PageHeader/>
-      <DateInputForm/>
       <ImageTitle imageTitle = {imageTitle}/>
+      <DateInputForm/>
       <NasaImage nasaImage = {imageURL}/>
       <ImageExplanation imageExplanation = {imageExplanation}/>
 

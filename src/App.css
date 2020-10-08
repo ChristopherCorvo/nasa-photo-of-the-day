@@ -3,6 +3,15 @@
   text-align: center;
 }
 
+* {
+  text-decoration: none;
+}
+
+a {
+  color: black;
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

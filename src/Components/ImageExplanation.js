@@ -1,15 +1,23 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Explanation = styled.div`   
+    
+    p{
+        font-size: 3rem;
+        text-align: center;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+`
 
 const ImageExplanation = props => {
     const { imageExplanation } = props;
-    console.log(imageExplanation)
 
-    
     return (
-        <div className = 'Nasa-Image-Explanation'>
+        <Explanation>
            <p> {imageExplanation} </p>
-
-        </div>
+        </Explanation>
     )
 }
 

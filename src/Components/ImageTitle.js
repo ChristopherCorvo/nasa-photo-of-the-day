@@ -1,16 +1,23 @@
 import React from 'react';
+import styled from 'styled-components';
 
+const PictureTitle = styled.div`
+
+    h2 {
+        font-size: 3rem;
+    }
+
+`
 
 
 const ImageTitle = props => {
 
     const { imageTitle } = props;
-    console.log(imageTitle)
     
     return (
-        <div className = 'title-of-image'>
+        <PictureTitle>
             <h2> {imageTitle} </h2>
-        </div>
+        </PictureTitle>
     )
 }
  
