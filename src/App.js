@@ -4,10 +4,11 @@ import "./App.css";
 import axios from 'axios' // importing the axios tools
 
 // Importing components --- long way
-
 import NasaImage from './Components/NasaImage';
 import ImageExplanation from './Components/ImageExplanation';
 import ImageTitle from './Components/ImageTitle';
+import PageHeader from './Components/PageHeader';
+import DateInputForm from './Components/DateInputForm';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
   const [imageExplanation, setImageExplanation] = useState('')
   
   useEffect(() => {
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date`)
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2020-10-07`)
       .then(res =>{
         
         // add data to state
@@ -33,11 +34,9 @@ function App() {
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-
+      
+      <PageHeader/>
+      <DateInputForm/>
       <ImageTitle imageTitle = {imageTitle}/>
       <NasaImage nasaImage = {imageURL}/>
       <ImageExplanation imageExplanation = {imageExplanation}/>
