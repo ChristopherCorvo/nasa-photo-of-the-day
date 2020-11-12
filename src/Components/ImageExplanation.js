@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const Explanation = styled.div`   
     
     p{
-        font-size: 3rem;
-        text-align: center;
+        font-size: 1rem;
+        text-align: justify;
         padding-left: 4%;
         padding-right: 4%;
     }

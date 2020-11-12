@@ -15,9 +15,13 @@ function App() {
   const [imageTitle, setImageTitle] = useState('')
   const [imageURL, setImageURL] = useState('') 
   const [imageExplanation, setImageExplanation] = useState('')
+
+  const [date, setDate ] = useState('') // =2020-10-08
+  console.log(date)
+  console.log(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`)
   
   useEffect(() => {
-    axios.get(``) //https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`) 
       .then(res =>{
         
         // add data to state
@@ -30,14 +34,17 @@ function App() {
       .catch(err =>{
         console.log("You recieved an error")
         })
-  },[])
+  },[date])
+
+  console.log(imageTitle)
+  console.log(imageTitle)
 
   return (
     <div className="App">
       
       <PageHeader/>
       <ImageTitle imageTitle = {imageTitle}/>
-      <DateInputForm/>
+      <DateInputForm setImageDate={setDate}/>
       <NasaImage nasaImage = {imageURL}/>
       <ImageExplanation imageExplanation = {imageExplanation}/>
 
