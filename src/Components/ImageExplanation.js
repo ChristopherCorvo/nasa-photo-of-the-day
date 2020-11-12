@@ -1,13 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Explanation = styled.div`   
-    
+const Explanation = styled.div`  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    ;
+   
     p{
         font-size: 1rem;
         text-align: justify;
-        padding-left: 4%;
-        padding-right: 4%;
+        padding: 4%;
+        align-items: center;
+        border: 2px solid black;
+        width: 45%;
     }
 `
 

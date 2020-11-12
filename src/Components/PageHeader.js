@@ -9,6 +9,7 @@ const Header = styled.div`
     justify-content: center;
     height: 12vh;
     
+    
     h1{
         font-size: 4rem;
         padding: 0;
@@ -36,7 +37,7 @@ const PageHeader = props => {
                 </NavBar>
                    
                 <div>
-                    <h1> Nasa Photo Of The Day!!</h1>
+                    <h1> Nasa Photo Of The Day</h1>
                 </div>
             </Header>
     )
